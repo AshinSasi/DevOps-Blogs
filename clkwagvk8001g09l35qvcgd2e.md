@@ -116,7 +116,7 @@ Backup_file_08042023_070845.tar.gz
 
 We are using tar command here to archive and also compress the file to create a backup file.
 
-* In the command ***tar -czvf,*** **c** indicates **create, z** is used to zip/compress the file, **v** enables verbose mode which means ***tar*** will display detailed information about the files being archived. The **f** option is used to specify the filename of the archive that will be created. `${backup_destination}/${backup_filename}` is the full path to the backup file, which combines the `backup_destination` (destination directory) with the `backup_file`(the name of the backup file).
+* In the command ***tar -czvf,*** **c** indicates **create, z** is used to zip/compress the file, **v** enables verbose mode which means ***tar*** will display detailed information about the files being archived. The **f** option is used to specify the filename of the archive that will be created. `${backup_destination}/${backup_file}` is the full path to the backup file, which combines the `backup_destination` (destination directory) with the `backup_file`(the name of the backup file).
     
 * `"backup_source"`: This is the source directory
     
@@ -148,9 +148,9 @@ We are using tar command here to archive and also compress the file to create a 
     3. To exit from crontab press Ctrl+X and save the cron schedule
         
 * ```plaintext
-    ubuntu@ip-:~/DevOps$ crontab -e
-    ubuntu@ip-:~/DevOps$ cd crontab -l
-    13 * * * * /home/ubuntu/DevOps/Backup_Script.sh
+      ubuntu@ip-:~/DevOps$ crontab -e
+      ubuntu@ip-:~/DevOps$ cd crontab -l
+      13 * * * * /home/ubuntu/DevOps/Backup_Script.sh
     ```
     
     Linux is fun and I hope you guys are reading all my daily blogs.
